@@ -56,11 +56,11 @@ outputFile = libraryName + '.js';
 
 const config = {
   entry: __dirname + '/src/index.js',
-  devtool: 'source-map',
+  devtool: 'eval',
   mode: 'development',
   output: {
     libraryTarget: 'umd', // make the bundle export
-    path: __dirname + '/dist',
+    path: __dirname + '/../beconsole/source/public/lib',
     filename: outputFile,
     library: 'draw2d'
   },

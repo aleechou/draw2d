@@ -328,11 +328,12 @@ draw2d.Connection = draw2d.shape.basic.PolyLine.extend({
 
     this._super(routingHints)
 
-    if (this.shape !== null) {
-      var z1 = this.sourcePort.getZOrder()
-      var z2 = this.targetPort.getZOrder()
-      z1 < z2 ? this.toBack(this.sourcePort) : this.toBack(this.targetPort)
-    }
+    // 注释掉这里，可以避免 线 被node挡住
+    // if (this.shape !== null) {
+    //   var z1 = this.sourcePort.getZOrder()
+    //   var z2 = this.targetPort.getZOrder()
+    //   z1 < z2 ? this.toBack(this.sourcePort) : this.toBack(this.targetPort)
+    // }
 
     return this
   },
