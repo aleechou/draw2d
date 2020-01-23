@@ -1169,7 +1169,8 @@ draw2d.Figure = Class.extend({
     // methods of the figure. A "repaint" isn't always dimension changing the figure.
     //
     this.children.each(function (i, e) {
-      e.locator.relocate(i, e.figure)
+      if(e.figure.visible)
+        e.locator.relocate(i, e.figure)
     })
 
     return this

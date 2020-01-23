@@ -119,11 +119,12 @@ draw2d.layout.connection.InteractiveManhattanConnectionRouter = draw2d.layout.co
     let oldVertices = routingHints.oldVertices
     let vertexCount = oldVertices.getSize()
 
-    let fromPt = conn.getStartPosition()
-    let fromDir = conn.getSource().getConnectionDirection(conn.getTarget())
 
+    let fromPt = conn.getStartPosition()
     let toPt = conn.getEndPosition()
-    let toDir = conn.getTarget().getConnectionDirection(conn.getSource())
+
+    var fromDir = conn.getSource().getConnectionDirection(conn.getTarget())
+    var toDir = conn.getTarget().getConnectionDirection(conn.getSource())
 
 
     // the port orientation has been changed. This can happen if the node rotates. In this case

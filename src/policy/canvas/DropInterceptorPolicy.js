@@ -76,11 +76,11 @@ draw2d.policy.canvas.DropInterceptorPolicy = draw2d.policy.canvas.CanvasPolicy.e
 
     // It is not possible to create a loop back connection at the moment.
     // Reason: no connection router implemented for this case
-    if ((connectInquirer instanceof draw2d.Port) && (connectIntent instanceof draw2d.Port)) {
-      if (connectInquirer.getParent() === connectIntent.getParent()) {
-        return null
-      }
-    }
+    // if ((connectInquirer instanceof draw2d.Port) && (connectIntent instanceof draw2d.Port)) {
+    //   if (connectInquirer.getParent() === connectIntent.getParent()) {
+    //     return null
+    //   }
+    // }
 
     // redirect the dragEnter handling to the hybrid port
     //

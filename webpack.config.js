@@ -60,7 +60,7 @@ const config = {
   mode: 'development',
   output: {
     libraryTarget: 'umd', // make the bundle export
-    path: __dirname + '/../beconsole/source/public/lib',
+    path: __dirname + '/../source/public/lib',
     filename: outputFile,
     library: 'draw2d'
   },
