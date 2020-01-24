@@ -154,10 +154,11 @@ draw2d.SetFigure = draw2d.shape.basic.Rectangle.extend({
    */
   applyTransformation: function () {
     let s =
-      "S" + this.scaleX + "," + this.scaleY + ",0,0 " +
+      // "S" + this.scaleX + "," + this.scaleY + ",0,0 " +
       "R" + this.rotationAngle + "," + ((this.getWidth() / 2) | 0) + "," + ((this.getHeight() / 2) | 0) +
       "T" + this.getAbsoluteX() + "," + this.getAbsoluteY() +
       ""
+    // console.log(s)
     this.svgNodes.transform(s)
     if (this.rotationAngle === 90 || this.rotationAngle === 270) {
       let before = this.svgNodes.getBBox(true)
@@ -367,6 +368,7 @@ draw2d.SetFigure = draw2d.shape.basic.Rectangle.extend({
     }
 
     this.svgNodes.attr({"stroke-scale": this.strokeScale})
+
 
     // update the visibility of the children
     this.setVisible(this.visible)
